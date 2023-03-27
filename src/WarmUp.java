@@ -26,7 +26,6 @@ public class WarmUp {
 
         return sum;
 
-
     }
 
     public static void main(String[] args) {
