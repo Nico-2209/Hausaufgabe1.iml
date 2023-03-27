@@ -20,7 +20,9 @@ public class WarmUp {
         int sum = 0;
 
         while (number > 0) {
+            //Wird durch 10 geteilt Rest wird in sum gespeichert.
             sum += number % 10;
+            //num wird durch 10 geteilt, um die letzte Ziffer zu entfernen.
             number /= 10;
         }
 
@@ -31,16 +33,13 @@ public class WarmUp {
     public static void main(String[] args) {
         int count = 0;
 
-        System.out.println(isPrime(97));
-
-
-        for (int i = 2; i <= 100; i++) {
+        for (int i = 1; i <= 100; i++) {
             if (isPrime(i) && isPrime(getDigitSum(i))) {
                 count++;
             }
         }
 
-        //System.out.println("Fuer " + count + " Zahlen x zwischen 1 und 100 gilt: x ist eine Primzahl und gleichzeitig ist die Quersumme von x ebenfalls eine Primzahl.");
+        System.out.println("Fuer " + count + " Zahlen x zwischen 1 und 100 gilt: x ist eine Primzahl und gleichzeitig ist die Quersumme von x ebenfalls eine Primzahl.");
     }
 
 }
