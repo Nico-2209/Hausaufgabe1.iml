@@ -1,6 +1,7 @@
 package Uebungen;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class Listen {
@@ -10,7 +11,7 @@ public class Listen {
      * @param list Die ArrayList von Integer-Objekten, deren Summe berechnet werden soll.
      * @return Die Summe aller Elemente in der ArrayList.
      */
-    public int sum(ArrayList<Integer> list) {
+    public static int sum(ArrayList<Integer> list) {
         int sum = 0;
         for (int i : list) {
             sum += i;
@@ -26,7 +27,7 @@ public class Listen {
      * @param firstLetter Der Buchstabe, mit dem die Elemente gefiltert werden sollen.
      * @return Eine neue ArrayList von String-Objekten, die nur die Elemente enthält, die dem Filter entsprechen.
      */
-    public ArrayList<String> filter(ArrayList<String> list, char firstLetter) {
+    public static ArrayList<String> filter(ArrayList<String> list, char firstLetter) {
         ArrayList<String> result = new ArrayList<>();
         for (String s : list) {
             if (s.charAt(0) == firstLetter) {
@@ -43,7 +44,7 @@ public class Listen {
      * @param threshold Der Schwellenwert, den die Elemente in der ArrayList überschreiten müssen, um gezählt zu werden.
      * @return Die Anzahl der Elemente in der ArrayList, die größer als der Schwellenwert sind.
      */
-    public int countGreaterThan(ArrayList<Double> list, double threshold) {
+    public static int countGreaterThan(ArrayList<Double> list, double threshold) {
         int count = 0;
         for (double d : list) {
             if (d > threshold) {
@@ -60,7 +61,7 @@ public class Listen {
      * @param list Die ArrayList von Integer-Objekten, aus der die Duplikate entfernt werden sollen.
      * @return Eine neue ArrayList von Integer-Objekten, die nur die einzigartigen Elemente enthält.
      */
-    public ArrayList<Integer> removeDuplicates(ArrayList<Integer> list) {
+    public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> list) {
         ArrayList<Integer> result = new ArrayList<>();
         for (int i : list) {
             if (!result.contains(i)) {
@@ -77,7 +78,7 @@ public class Listen {
      * @param size Die Größe der zufälligen Teilmenge, die erstellt werden soll.
      * @return Eine neue ArrayList von String-Objekten, die eine zufällige Teilmenge der ursprünglichen ArrayList enthält.
      */
-    public ArrayList<String> randomSubset(ArrayList<String> list, int size) {
+    public static ArrayList<String> randomSubset(ArrayList<String> list, int size) {
         ArrayList<String> result = new ArrayList<>();
         Random rand = new Random();
         while (result.size() < size && !list.isEmpty()) {
@@ -85,6 +86,51 @@ public class Listen {
             result.add(list.remove(index));
         }
         return result;
+    }
+
+
+    public static void main(String[] args) {
+
+
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Guten");
+        list.add("Tag");
+        list.add("Wie");
+        list.add("gehts");
+        list.add("Ali");
+
+
+        System.out.println(randomSubset(list,21));
+
+        //------------------------------------------------
+        // Beispiel für die Verwendung von 5 häufig verwendeten Methoden
+
+        // Beispiel-ArrayList mit einigen Integer-Objekten
+        ArrayList<Integer> liste = new ArrayList<>();
+        liste.add(5);
+        liste.add(8);
+        liste.add(3);
+        liste.add(12);
+        liste.add(9);
+
+        // 1. sort(): Sortiert die ArrayList in aufsteigender Reihenfolge
+        Collections.sort(liste);
+        System.out.println("Sortierte Liste: " + liste);
+
+        // 2. size(): Gibt die Anzahl der Elemente in der ArrayList zurück
+        System.out.println("Anzahl der Elemente: " + liste.size());
+
+        // 3. get(): Gibt das Element an der angegebenen Position in der ArrayList zurück
+        System.out.println("Element an Position 2: " + liste.get(2));
+
+        // 4. add(): Fügt ein Element am Ende der ArrayList hinzu
+        liste.add(17);
+        System.out.println("Liste mit hinzugefügtem Element: " + liste);
+
+        // 5. remove(): Entfernt das Element an der angegebenen Position aus der ArrayList
+        liste.remove(3);
+        System.out.println("Liste ohne Element an Position 3: " + liste);
+
     }
 
 }
