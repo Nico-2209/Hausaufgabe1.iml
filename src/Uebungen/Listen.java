@@ -1,10 +1,11 @@
 package Uebungen;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
+import java.util.*;
 
 public class Listen {
+
+
+
     /**
      * Berechnet die Summe aller Integer-Elemente in der übergebenen ArrayList.
      *
@@ -130,6 +131,31 @@ public class Listen {
         // 5. remove(): Entfernt das Element an der angegebenen Position aus der ArrayList
         liste.remove(3);
         System.out.println("Liste ohne Element an Position 3: " + liste);
+
+
+        // 7. swap(): Tauscht das erste und letzte Element in der Liste
+        Collections.swap(liste, 0, liste.size() - 1);
+        System.out.println("Liste mit getauschtem ersten und letzten Element: " + liste);
+
+        // 8. reverse(): Sortiert die Liste in umgekehrter Reihenfolge
+        Collections.reverse(liste);
+        System.out.println("Liste in umgekehrter Reihenfolge: " + liste);
+
+        // 9. indexOf(): Sucht alle leeren Stellen in der Liste
+        for (int i = 0; i < liste.size(); i++) {
+            if (liste.indexOf(i) == -1) {
+                System.out.println("Leere Stelle an Position " + i);
+            }
+        }
+        // Schleife, um alle leeren Stellen in der Liste zu entfernen
+        for (int i = liste.size() - 1; i >= 0; i--) {
+            if (liste.get(i) == null) {
+                liste.remove(i);
+            }
+        }
+        System.out.println("Liste ohne leere Stellen: " + liste);
+
+
 
     }
 
