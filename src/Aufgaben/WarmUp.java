@@ -2,6 +2,7 @@ package Aufgaben;
 
 public class WarmUp {
 
+
     // Methode zur Überprüfung, ob eine Zahl eine Primzahl ist
     public static boolean isPrime(int number) {
         if (number <= 1) {
