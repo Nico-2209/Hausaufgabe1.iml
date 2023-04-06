@@ -1,5 +1,7 @@
 package Aufgaben;
 
+import java.lang.Math.*;
+
 public class WarmUp {
 
 
