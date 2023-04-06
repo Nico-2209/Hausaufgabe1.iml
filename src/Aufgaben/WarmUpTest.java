@@ -1,6 +1,5 @@
 package Aufgaben;
 
-import Aufgaben.WarmUp;
 import org.junit.Test;
 
 import static junit.framework.TestCase.*;
