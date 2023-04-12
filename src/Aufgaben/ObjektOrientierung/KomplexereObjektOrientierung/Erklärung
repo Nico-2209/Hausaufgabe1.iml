@@ -1,0 +1,9 @@
+Interfaces definieren eine Schnittstelle, indem sie Methoden-Signaturen vorgeben, die Klassen, die das Interface implementieren, implementieren müssen.
+
+Das Interface beschreibt somit, welche Methoden existieren müssen und welche Parameter- und Rückgabetypen sie haben sollen, aber nicht wie sie implementiert werden sollen.
+
+Abstrakte Klassen hingegen können sowohl abstrakte als auch konkrete Methoden enthalten, aber es können keine Objekte von abstrakten Klassen erstellt werden.
+
+Stattdessen dienen sie als Vorlage für konkrete Klassen, indem sie bereits eine gewisse Grundimplementierung bereitstellen und die konkreten Klassen die abstrakten Methoden implementieren müssen.
+
+Man könnte also sagen, dass Interfaces eine Art Vertrag zwischen Klassen sind, während abstrakte Klassen eine Art Vorlage oder Schablone für konkrete Klassen darstellen.
