@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 
 import static Aufgaben.TDDimPairProgramming.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /*Es soll eine Klasse erstellt werden, die eine Reihe von statischen Methoden
 enthält, die jeweils einen Text übergeben bekommen und unterschiedliche
@@ -22,6 +23,8 @@ public class TDDimPairProgrammingTest {
 
     @Test
     public void anzahlZeichenTest() {
+
+        assertEquals(-1,anzahlZeichen(null));
         assertEquals(7, anzahlZeichen("abc def"));
         assertEquals(4, anzahlZeichen("olla"));
         assertEquals(0, anzahlZeichen(""));
@@ -33,6 +36,7 @@ public class TDDimPairProgrammingTest {
 
     @Test
     public void startPosTextTest() {
+        assertEquals(-1,startPosText(null,null));
         assertEquals(11, startPosText("ein langer Max", "Max"));
         assertEquals(0, startPosText("Max", "Max"));
         assertEquals(11, startPosText("ein langer Max", "M"));
@@ -45,6 +49,7 @@ public class TDDimPairProgrammingTest {
 
     @Test
     public void textTeil7bis12Test() {
+        assertEquals("Eingabe darf nicht leer sein",textTeil7bis12(null));
         assertEquals("gWieGe", textTeil7bis12("GutenTagWieGehts"));
         assertThrows(IndexOutOfBoundsException.class, () -> textTeil7bis12("abcdef"));
         assertEquals("lt1234", textTeil7bis12("HalloWelt1234"));
@@ -57,17 +62,18 @@ public class TDDimPairProgrammingTest {
 
     @Test
     public void umgedrehterTextTest() {
+        assertEquals("Eingabe darf nicht leer sein", umgedrehterText(null));
         assertEquals("", umgedrehterText(""));
         assertEquals("a", umgedrehterText("a"));
         assertEquals("54321", umgedrehterText("12345"));
         assertEquals("!tleW ollaH", umgedrehterText("Hallo Welt!"));
         assertEquals("!&%$#", umgedrehterText("#$%&!"));
-        assertThrows(NullPointerException.class, () -> umgedrehterText(null));
 
     }
 
     @Test
     public void buchstabenSortTest() {
+        assertEquals(null,buchstabenSort(null));
         assertEquals("abcd", buchstabenSort("dbac").get(0));
         assertEquals("dcba", buchstabenSort("dbac").get(1));
     }
