@@ -1,10 +1,10 @@
 package Aufgaben.SpeichernLesen;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import javax.swing.JOptionPane;
 
 public class Main {
     public static void eingabeSpeicher(File file) {
@@ -70,7 +70,7 @@ public class Main {
             for (int i = 0; i < notizen.size(); i++) {
                 options.append((i + 1)).append(": ").append(notizen.get(i)).append("\n");
             }
-            String eingabe = JOptionPane.showInputDialog(null, "Wählen Sie die Notizen aus, die Sie löschen möchten, getrennt durch Kommas:\n" + options.toString());
+            String eingabe = JOptionPane.showInputDialog(null, "Wählen Sie die Notizen aus, die Sie löschen möchten, getrennt durch Kommas:\n" + options);
             String[] auswahl = eingabe.split(",");
 
             //Durch das Sortieren in umgekehrter Reihenfolge stellen wir sicher, dass die zu löschenden Notizen in der richtigen
