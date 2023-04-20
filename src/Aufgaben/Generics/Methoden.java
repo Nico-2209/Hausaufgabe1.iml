@@ -1,12 +1,13 @@
 package Aufgaben.Generics;
 
+import java.util.ArrayList;
+
 public class Methoden {
 
-    public static <Type extends Number> Number addiere(Type variable) {
-
-        Number variable1 = variable.intValue() + 2;
-
-        return variable1;
+    public static <T> void printList(ArrayList<T> list) {
+        for (T item : list) {
+            System.out.println(item);
+        }
     }
 
 }

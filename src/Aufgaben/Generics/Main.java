@@ -1,18 +1,24 @@
 package Aufgaben.Generics;
 
-import static Aufgaben.Generics.Methoden.addiere;
+import java.util.ArrayList;
 
-public class Main {
+public  class Main {
     public static void main(String[] args) {
 
-int a = 10;
-double b = 10.0;
-float c = 10.0f;
-        System.out.println(addiere(a));
-        System.out.println(addiere(b));
-        System.out.println(addiere(c));
-
-        a = (int) addiere(a);
+        ArrayList<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.add("e");
+Methoden.printList(list);
+ArrayList<Integer> list2 = new ArrayList<>();
+list2.add(1);
+list2.add(2);
+list2.add(3);
+list2.add(4);
+list2.add(5);
+Methoden.printList(list2);
 
     }
 }
